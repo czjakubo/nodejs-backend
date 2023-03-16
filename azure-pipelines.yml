@@ -74,7 +74,7 @@ stages:
               WebAppName: 'as-be-poc'
               deployToSlotOrASE: true
               ResourceGroupName: 'rg-priv-net-poc'
-              SlotName: 'Production'
+              SlotName: 'dev'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|16-lts'
               StartupCommand: 'npm run start'

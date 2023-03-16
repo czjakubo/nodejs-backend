@@ -88,5 +88,12 @@ stages:
           #     package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
           #     startUpCommand: 'npm run start'
           #     app
-            
+          - task: AzureAppServiceManage@0
+            inputs:
+              azureSubscription: 'LEGO-DIGI-BT-LRMP-IoT-DevTest'
+              Action: 'Swap Slots'
+              WebAppName: 'as-be-poc'
+              ResourceGroupName: 'rg-priv-net-poc'
+              SourceSlot: 'dev'
+              PreserveVnet: true
             

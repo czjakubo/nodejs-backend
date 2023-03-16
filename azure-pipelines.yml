@@ -72,6 +72,9 @@ stages:
               azureSubscription: 'LEGO-DIGI-BT-LRMP-IoT-DevTest'
               appType: 'webAppLinux'
               WebAppName: 'as-be-poc'
+              deployToSlotOrASE: true
+              ResourceGroupName: 'rg-priv-net-poc'
+              SlotName: 'dev'
               packageForLinux: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
               RuntimeStack: 'NODE|16-lts'
               StartupCommand: 'npm run start'
